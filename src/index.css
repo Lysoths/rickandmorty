@@ -1,13 +1,169 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #ecedf8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+  /* margin-top: 200px; */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  width: 220px;
+  transition: all 0.2s linear;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+
+.card .Alive {
+  position: absolute;
+  background-color: #5b8e7d;
+  color: white;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.unknown {
+  position: absolute;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.Dead {
+  position: absolute;
+  background-color: #c44536;
+  color: white;
+  font-weight: bold;
+  top: 15px;
+  right: 15px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.isAliveDead {
+  background-color: red;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: pink;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2 linear;
+}
+
+button:hover {
+  color: White;
+}
+
+.characterInfo {
+  font-weight: bold;
+  margin: 5px 1px;
+  padding: 5px;
+  font-size: 0.9rem;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+.characterName {
+  color: #0a0908;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+.lastSeen {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+  color: #3d5a80;
+}
+.search {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.search input {
+  width: 50%;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid #eca72c;
+  padding: 5px;
+}
+
+.search input::placeholder {
+  padding: 15px;
+  font-size: 1.2em;
+  color: #3d5a80;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #904e55;
+  margin: 15px;
+}
+
+.rickImage {
+  width: 50%;
+  margin: 10px;
 }
